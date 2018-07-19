@@ -33,7 +33,7 @@ function last_git_commit_block_view($delta = '') {
             $arr = explode(' ', $content);
             
             $last_commit = substr(array_values(array_slice($arr, -13))[0], 0, 7);
-            $blocks['content'] = t('<a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/'.array_values(array_slice($arr, -13))[0].' "> '. $last_commit .' </a>');
+            $blocks['content'] = t('<a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/' . array_values(array_slice($arr, -13))[0] . ' "> ' . $last_commit . ' </a>');
         //}
             break;
         

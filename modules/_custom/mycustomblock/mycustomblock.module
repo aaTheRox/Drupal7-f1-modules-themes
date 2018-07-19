@@ -20,7 +20,7 @@ function mycustomblock_block_info() {
 function mycustomblock_block_view($delta = '') {
   $blocks = array();
   
-  switch($delta){
+  switch ($delta) {
     case  'mycustomblock':
     $blocks['subject'] = t('eeee');
     $blocks['content'] = t('just testing');
