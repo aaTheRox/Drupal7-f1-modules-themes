@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Next Race countdown
+*/
+
+function next_race_countdown_block_info() {
+    $blocks = array();
+    $blocks['next_race_countdown'] = array(
+        'info'  =>  t('Next Race Countdown')
+    );
+    return $blocks;
+ } 
+
+
+function next_race_countdown_block_view($delta='') {
+    $blocks = array();
+    switch ($delta) {
+        case 'next_race_countdown':
+        // Adding the JS for the countdown
+        //drupal_add_js(drupal_get_path('module', 'next_race_countdown') . '/js/countdown.js');
+        //$blocks['titles'] = t('Next Race countdown');
+        $blocks['content'] = t('<div id="next-race-countdown"></div>');
+        drupal_add_js(drupal_get_path('theme', 'bartik_edited') . '/js/jquery-3.3.1.min.js');
+        drupal_add_js(drupal_get_path('theme', 'bartik_edited') . '/js/countdown.js');
+            break;
+    }
+    return $blocks;
+}
