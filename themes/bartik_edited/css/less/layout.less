@@ -2,9 +2,13 @@
 // main: main.less
 
 @primary-color: #f44336;
+@link-color: #1d1d1d;
 a {
-    color: @primary-color;
-    
+    color: @link-color;
+    &:hover {
+        color: darken(@link-color, 20%);
+        text-decoration: none;
+    }
 }
 
 .next-race-block {
@@ -29,4 +33,15 @@ a {
 
 #sidebar-first,#sidebar-second {
   width: 25%;
+}
+
+.block-last-git-commit {
+    position: fixed;
+    top: 70px;
+    padding: 16px;
+    background: #333333;
+    color: #fff;
+    width: 100px;
+    z-index: 999;
+    left: 0;
 }

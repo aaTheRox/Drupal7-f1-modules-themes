@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ *  Last Git commit
+ */
+
+/**
+ * Implements hook_block_info
+ */
+function last_git_commit_block_info() {
+    $blocks = array();
+    $blocks['last_git_commit'] = array(
+        'info' => t('Shows last git commit')
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ * This will show our last git commit, and will allow us to see it on the github project's page
+*/
+
+function last_git_commit_block_view($delta = '') {
+    $blocks = array();
+
+    switch ($delta) {
+        case 'last_git_commit':
+        
+        $file =  'sites/all/.git/logs/HEAD';
+        // We try to find the file, if it's not found we do nothing.
+       // if(file_exists($file)) {
+            $content = file_get_contents($file);
+            $arr = explode(' ', $content);
+            
+            $last_commit = substr(array_values(array_slice($arr, -13))[0], 0, 7);
+            $blocks['content'] = t('<a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/'.array_values(array_slice($arr, -13))[0].' "> '. $last_commit .' </a>');
+        //}
+            break;
+        
+    }
+    return $blocks;
+}
