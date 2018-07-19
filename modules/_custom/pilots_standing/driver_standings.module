@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Current F1 Driver Standings
+*/
+
+function driver_standings_block_info() {
+    $blocks = array();
+    $blocks['driver_standings'] = array(
+        'info'  =>  t('Current Driver Standings')
+    );
+    return $blocks;
+ } 
+
+
+function driver_standings_block_view($delta='') {
+    $blocks = array();
+    switch ($delta) {
+        case 'driver_standings':
+        // Adding the JS for the countdown
+        //drupal_add_js(drupal_get_path('module', 'driver_standings') . '/js/countdown.js');
+        //$blocks['titles'] = t('Driver Standings.');
+        $blocks['content'] = t('<div id="next-race-countdown"></div>');
+        drupal_add_js(drupal_get_path('theme', 'bartik_edited') . '/js/jquery-3.3.1.min.js');
+        drupal_add_js(drupal_get_path('theme', 'bartik_edited') . '/js/countdown.js');
+            break;
+    }
+    return $blocks;
+}

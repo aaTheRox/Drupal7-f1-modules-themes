@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * A module that creates a custom block
+ */
+
+
+/**
+  * Implements hook_block_info()
+*/
+function mycustomblock_block_info() {
+  $blocks = array();
+  $blocks['mycustomblock']['info'] = t('My Custom block:)');
+  return $blocks;
+}
+function mycustomblock_block_view($delta = '') {
+  $blocks = array();
+  
+  switch($delta){
+    case  'mycustomblock':
+    $blocks['subject'] = t('eeee');
+    $blocks['content'] = t('just testing');
+    break;
+  }
+  return $blocks;
+  
+}

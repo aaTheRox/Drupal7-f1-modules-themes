@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * A module that creates a custom block
+ */
+
+
+/**
+  * Implements hook_block_info()
+*/
+function next_race_block_info() {
+
+    $blocks['next_race'] = array(
+      'info' => t('Next F1 Race Module')
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+*/
+function next_race_block_view($delta = '') {
+    $block = array();
+    switch ($delta) {
+      //$content = file_get_contents('next_race_html.php', true);
+      case 'next_race':
+        //$block['subject'] = t('Next F1 race');
+        $block['content'] = file_get_contents('next_race_html.php', true);
+        break;
+    }
+    return $block;
+  }

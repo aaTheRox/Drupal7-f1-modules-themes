@@ -1,0 +1,5 @@
+name = Next F1 Race 
+description = Next F1 Race in the calendar
+package = Kamal's custom modules
+core = 7.x
+version = 7.x-0.1
