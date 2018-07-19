@@ -23,3 +23,15 @@ a {
 #sidebar-second {
   width: 25%;
 }
+#main-menu-links {
+  padding: 10px;
+  display: inline;
+}
+#main-menu-links ul {
+  display: inline;
+}
+#main-menu-links ul li {
+  list-style: none;
+  padding: 5px;
+  float: left;
+}
