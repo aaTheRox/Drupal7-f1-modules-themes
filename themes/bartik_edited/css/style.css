@@ -439,15 +439,7 @@ h1#site-name {
 
 /* --------------- Main Menu ------------ */
 
-#main-menu {
-  clear: both;
-}
 
-.featured #main-menu-links li a:active,
-.featured #main-menu-links li a.active {
-  background: #f0f0f0;
-  background: rgba(240, 240, 240, 1.0);
-}
 
 /* --------------- Secondary Menu ------------ */
 

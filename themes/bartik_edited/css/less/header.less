@@ -1,15 +1,39 @@
 // main: main.less
-
+#main-menu {
+    clear: both;
+    margin: -21px 0;
+}
 #main-menu-links {
     padding: 10px;
     display: inline;
-    ul {
+
         display: inline;
         li {
+            background-color: #edefec;
             list-style: none;
-            padding: 5px;
+            padding: 10px;
             float: left;
-        }
+            font-size: 22px;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+            margin-left: 20px;
+            color: green;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover {
+               // background-color: red;
+            }
+            a {
+                background: none;
+                color: #000;
+                &:hover, &:focus {
+                    text-decoration: none;
+                }
+                &.active {
+                    background: none !important;
+                }
+            }
     }
 }
 

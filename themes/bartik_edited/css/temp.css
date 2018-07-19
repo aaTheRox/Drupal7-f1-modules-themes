@@ -23,15 +23,36 @@ a {
 #sidebar-second {
   width: 25%;
 }
+#main-menu {
+  clear: both;
+  margin: -21px 0;
+}
 #main-menu-links {
   padding: 10px;
   display: inline;
 }
-#main-menu-links ul {
-  display: inline;
-}
-#main-menu-links ul li {
+#main-menu-links li {
+  background-color: #edefec;
   list-style: none;
-  padding: 5px;
+  padding: 10px;
   float: left;
+  font-size: 22px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  margin-left: 20px;
+  color: green;
+}
+#main-menu-links li:first-child {
+  margin-left: 0;
+}
+#main-menu-links li a {
+  background: none;
+  color: #000;
+}
+#main-menu-links li a:hover,
+#main-menu-links li a:focus {
+  text-decoration: none;
+}
+#main-menu-links li a.active {
+  background: none !important;
 }
