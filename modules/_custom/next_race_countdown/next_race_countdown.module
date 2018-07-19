@@ -3,7 +3,9 @@
  * @file
  * Next Race countdown
 */
-
+/**
+  * Implements hook_block_info
+*/
 function next_race_countdown_block_info() {
     $blocks = array();
     $blocks['next_race_countdown'] = array(
@@ -12,7 +14,9 @@ function next_race_countdown_block_info() {
     return $blocks;
  } 
 
-
+/**
+  * Implements hook_block_view
+*/
 function next_race_countdown_block_view($delta='') {
     $blocks = array();
     switch ($delta) {

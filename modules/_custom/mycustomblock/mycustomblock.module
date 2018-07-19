@@ -14,6 +14,9 @@ function mycustomblock_block_info() {
   $blocks['mycustomblock']['info'] = t('My Custom block:)');
   return $blocks;
 }
+/**
+  * Implements hook_block_view
+*/
 function mycustomblock_block_view($delta = '') {
   $blocks = array();
   
