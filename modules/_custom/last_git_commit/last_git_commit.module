@@ -31,14 +31,14 @@ function last_git_commit_block_view($delta, $branch = "master") {
 
         $file =  $master;
         // We try to find the file, if it's not found we do nothing.
-       // if(file_exists($file)) {
+       if(file_exists($file)) {
             $content = file_get_contents($file);
             $arr = explode(' ', $content);
             
             $last_commit = substr(file_get_contents($file), 0, 7);
             
             $blocks['content'] = t('<a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/' . $content . ' "> ' . $last_commit . ' </a>');
-        //}
+        }
             break;
         
     }
