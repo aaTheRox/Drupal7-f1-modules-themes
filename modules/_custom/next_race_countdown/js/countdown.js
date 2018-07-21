@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#next-race-countdown').html('loading...');
-    var date = new Date("Jul 20, 2018 11:00:00").getTime();
+    var date = new Date("Jul 27, 2018 11:00:00").getTime();
     var x = setInterval(function () {
     
     // Get todays date and time
@@ -19,10 +19,10 @@ $(document).ready(function () {
     $('#next-race-countdown').html('<h3>Next GP (FP1) in ' + days + "d " + hours + "h "
     + minutes + "m " + seconds + "s </h3>");
     
-    }, 1000);
-
     if (distance < 0) {
         clearInterval(x);
-        $('#next-race-countdown').html("#UNKNOWN");
+        $('#next-race-countdown').html("");
     }
+    }, 1000);
+
 });
