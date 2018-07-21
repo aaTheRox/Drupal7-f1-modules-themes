@@ -1,3 +1,4 @@
-# Drupal7-f1-modules-themes
+# Drupal 7 - Themes and Modules (Learning purpose)
 
-## I'll be creating modules to learn more about drupal 7.
+
+> I'll be creating modules to learn more about drupal 7
