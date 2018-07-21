@@ -25,7 +25,7 @@ function next_race_countdown_block_view($delta='') {
         //drupal_add_js(drupal_get_path('module', 'next_race_countdown') . '/js/countdown.js');
         //$blocks['titles'] = t('Next Race countdown');
         $blocks['content'] = t('<div id="next-race-countdown"></div>');
-        drupal_add_js(drupal_get_path('theme', 'bartik_edited') . '/js/jquery-3.3.1.min.js');
+        drupal_add_js(drupal_get_path('theme', 'bartik_edited') . '/js/jquery-2.1.4.min.js');
         drupal_add_js(drupal_get_path('module', 'next_race_countdown') . '/js/countdown.js');
             break;
     }

@@ -37,7 +37,7 @@ function last_git_commit_block_view($delta, $branch = "master") {
             
             $last_commit = substr(file_get_contents($file), 0, 7);
             
-            $blocks['content'] = t('<a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/' . $content . ' "> ' . $last_commit . ' </a>');
+            $blocks['content'] = t('Latest commit: <a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/' . $content . ' "> ' . $last_commit . ' </a>');
         }
             break;
         
