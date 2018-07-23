@@ -22,7 +22,27 @@ function driver_standings_block_view($delta='') {
     switch ($delta) {
         case 'driver_standings':
         //$blocks['titles'] = t('Driver Standings.');
-        $blocks['content'] = t('<h3>Driver Standings</h3><p>Working on it...</p>');
+        $api = simplexml_load_file('http://ergast.com/api/f1/current/driverStandings');
+       $output = '<table><thead>
+       <tr>
+        <th>POS</th>
+        <th>Driver</th>
+        <th>Nationality</th>
+        <th>Team</th>
+        <th>Points</th>
+       </tr>
+       </thead><tbody>';
+        foreach($api->StandingsTable->StandingsList as $driver) {
+            for ($i=0; $i < 20; $i++) { 
+                $output .= '<tr><td>' . ($i+1) . '</td>';
+                $output .= '<td>' . $driver->DriverStanding[$i]->Driver->FamilyName . '</td>';
+                $output .= '<td>' . $driver->DriverStanding[$i]->Driver->Nationality . '</td>';
+                $output .= '<td>' . $driver->DriverStanding[$i]->Constructor->Name . '</td>';
+                $output .= '<td>' . $driver->DriverStanding[$i]['points'] . '</td></tr>';
+            }
+        }
+        $output .= '</tbody></table>';
+        $blocks['content'] = $output;
         
         break;
     }
