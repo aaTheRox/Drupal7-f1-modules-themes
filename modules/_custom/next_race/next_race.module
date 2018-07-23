@@ -23,10 +23,12 @@ function next_race_block_info() {
 function next_race_block_view($delta = '') {
     $block = array();
     switch ($delta) {
-      //$content = file_get_contents('next_race_html.php', TRUE);
       case 'next_race':
         //$block['subject'] = t('Next F1 race');
-        $block['content'] = file_get_contents('next_race_html.php', TRUE);
+        ob_start();
+        include "next_race_content.php";
+        $block['content'] = ob_get_contents();
+        ob_end_clean();
         break;
     }
     return $block;

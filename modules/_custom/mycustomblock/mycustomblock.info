@@ -1,5 +1,0 @@
-name = My Custom module block
-description = This is a custom block module
-package = Kamal's custom modules
-core = 7.x
-version = 7.x-0.1

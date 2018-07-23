@@ -1,0 +1,1 @@
+Latest commit: <a href="https://github.com/nouaryk/Drupal7-f1-modules-themes/commit/'<?= $_GET['content']; ?>' "> ' . $last_commit . ' </a>
